@@ -73,8 +73,8 @@ export default function Hero() {
 
                             {/* UPDATED: Link to PDF file in public folder */}
                             <a
-                                href="/CV_Nguyen_Trong_Nhan_Fullstack.pdf"
-                                download="CV_Nguyen_Trong_Nhan_Fullstack.pdf"
+                                href="/CV_Nguyen_Trong_Nhan_Fullstack-en.pdf"
+                                download="CV_Nguyen_Trong_Nhan_Fullstack-en.pdf"
                                 className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-slate-700 bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300 hover:text-blue-600 transition-all duration-300 shadow-sm hover:-translate-y-1"
                             >
                                 <Download className="mr-2 w-4 h-4" />
