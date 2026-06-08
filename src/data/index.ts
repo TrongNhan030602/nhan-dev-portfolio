@@ -1,4 +1,5 @@
 import { PortfolioData } from "@/types/portfolio";
+import { Type } from "lucide-react";
 
 export const portfolioData: PortfolioData = {
   personalInfo: {
@@ -10,18 +11,18 @@ export const portfolioData: PortfolioData = {
     linkedin: "https://www.linkedin.com/in/tr%E1%BB%8Dng-nh%C3%A2n-nguy%E1%BB%85n-b162a9414",
     zalo: "https://zalo.me/0334323707",
   },
-  skills: [
+skills: [
     {
       category: "Frontend",
       items: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "Framer Motion"],
     },
     {
       category: "Backend",
-      items: ["PHP 8.3", "Laravel 12", "RESTful API", "Node.js"],
+      items: ["PHP 8.3", "Laravel 12", "RESTful API", "JWT / Sanctum", "Eloquent ORM"],
     },
     {
-      category: "Database & Infrastructure",
-      items: ["MySQL", "PostgreSQL", "VPS Linux", "Apache", "PM2", "Git"],
+      category: "Database & DevOps",
+      items: ["MySQL", "PostgreSQL", "Linux VPS", "Apache / Nginx", "Git & CI/CD"],
     },
   ],
   experiences: [
@@ -68,18 +69,18 @@ export const portfolioData: PortfolioData = {
       liveUrl: "https://dich-vu.design24.vn/",
     },
   ],
-  archiveProjects: [
+ archiveProjects: [
     {
       id: "arch-1",
       title: "DCT MART",
       url: "https://www.dctmart.vn/",
-      techStack: ["React", "Node.js", "Tailwind CSS"],
+      techStack: ["React", "REST API", "Tailwind CSS", "Redux Toolkit"], 
     },
     {
       id: "arch-2",
       title: "Aqua Lao Water Purifier Website",
       url: "https://maylocnuocaqualao.com/",
-      techStack: ["React", "Node.js", "Tailwind CSS"],
+      techStack: ["React", "REST API", "Tailwind CSS", "Redux Toolkit"], 
     },
     {
       id: "arch-3",
@@ -91,7 +92,7 @@ export const portfolioData: PortfolioData = {
       id: "arch-4",
       title: "Can Tho Tech Supply & Demand Landing Page",
       url: "https://ket-noi-cung-cau-cong-nghe.design24.vn/",
-      techStack: ["React", "Tailwind CSS", "Framer Motion"],
+      techStack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     },
   ]
 };

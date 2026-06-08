@@ -68,40 +68,72 @@ export default function Footer() {
                         </nav>
                     </div>
 
-                    {/* Social Links */}
+                    {/* Social Links - THE UPGRADED COMPONENT */}
                     <div className="md:col-span-3 flex flex-col items-center md:items-end">
                         <h4 className="text-slate-100 font-black tracking-widest uppercase mb-6 text-sm">Connect</h4>
-                        <div className="flex flex-wrap justify-center md:justify-end gap-3">
+
+                        {/* Wrapper "Card" tái thiết kế chuẩn Dark Theme */}
+                        <div className="flex flex-wrap justify-center gap-4  p-4 rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.2)]  backdrop-blur-sm w-fit">
+
+                            {/* GitHub Button */}
                             <a
                                 href={portfolioData.personalInfo.github}
                                 target="_blank"
-                                className="p-3.5 bg-slate-800/50 border border-slate-700/50 text-slate-400 hover:text-white hover:bg-slate-700 hover:border-slate-600 rounded-xl transition-all duration-300 shadow-sm"
                                 aria-label="GitHub"
+                                className="group relative w-10 h-[50px] bg-[#2c2c2c] flex items-center justify-center overflow-hidden transition-colors duration-300 rounded-[15px_0_15px_0] hover:bg-[#201f1f] active:scale-90"
                             >
-                                <GithubIcon className="w-5 h-5" />
+                                {/* Layer Icon Hover (Từ trên trượt xuống) */}
+                                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-y-0 -translate-y-full">
+                                    <GithubIcon className="w-[17px] h-[17px] text-white" />
+                                </div>
+                                {/* Layer Icon Default (Bị đẩy xuống dưới) */}
+                                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-y-full translate-y-0">
+                                    <GithubIcon className="w-[17px] h-[17px] text-white" />
+                                </div>
                             </a>
+
+                            {/* LinkedIn Button */}
                             <a
                                 href={portfolioData.personalInfo.linkedin}
                                 target="_blank"
-                                className="p-3.5 bg-slate-800/50 border border-slate-700/50 text-slate-400 hover:text-blue-400 hover:bg-blue-900/30 hover:border-blue-500/50 rounded-xl transition-all duration-300 shadow-sm"
                                 aria-label="LinkedIn"
+                                className="group relative w-10 h-[50px] bg-[#2c2c2c] flex items-center justify-center overflow-hidden transition-colors duration-300 rounded-[15px_0_15px_0] hover:bg-[#0072b1] active:scale-90"
                             >
-                                <LinkedinIcon className="w-5 h-5" />
+                                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-y-0 -translate-y-full">
+                                    <LinkedinIcon className="w-[17px] h-[17px] text-white" />
+                                </div>
+                                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-y-full translate-y-0">
+                                    <LinkedinIcon className="w-[17px] h-[17px] text-white" />
+                                </div>
                             </a>
+
+                            {/* Zalo Button */}
                             <a
                                 href={portfolioData.personalInfo.zalo}
                                 target="_blank"
-                                className="p-3.5 bg-slate-800/50 border border-slate-700/50 text-slate-400 hover:text-blue-400 hover:bg-blue-500/20 hover:border-blue-500/50 rounded-xl transition-all duration-300 shadow-sm"
                                 aria-label="Zalo"
+                                className="group relative w-10 h-[50px] bg-[#2c2c2c] flex items-center justify-center overflow-hidden transition-colors duration-300 rounded-[15px_0_15px_0] hover:bg-[#0068ff] active:scale-90"
                             >
-                                <ZaloIcon className="w-5 h-5" />
+                                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-y-0 -translate-y-full">
+                                    <ZaloIcon className="w-[17px] h-[17px] text-white" />
+                                </div>
+                                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-y-full translate-y-0">
+                                    <ZaloIcon className="w-[17px] h-[17px] text-white" />
+                                </div>
                             </a>
+
+                            {/* Email Button */}
                             <a
                                 href={`mailto:${portfolioData.personalInfo.email}`}
-                                className="p-3.5 bg-slate-800/50 border border-slate-700/50 text-slate-400 hover:text-rose-400 hover:bg-rose-900/30 hover:border-rose-500/50 rounded-xl transition-all duration-300 shadow-sm"
                                 aria-label="Email"
+                                className="group relative w-10 h-[50px] bg-[#2c2c2c] flex items-center justify-center overflow-hidden transition-colors duration-300 rounded-[15px_0_15px_0] hover:bg-[#ea4335] active:scale-90"
                             >
-                                <Mail className="w-5 h-5" />
+                                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-y-0 -translate-y-full">
+                                    <Mail className="w-[17px] h-[17px] text-white" />
+                                </div>
+                                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-y-full translate-y-0">
+                                    <Mail className="w-[17px] h-[17px] text-white" />
+                                </div>
                             </a>
                         </div>
                     </div>

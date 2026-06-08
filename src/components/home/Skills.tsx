@@ -58,7 +58,7 @@ export default function Skills() {
             </div>
 
             {/* Background Decor */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-50 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-50/50 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
             <div className="container mx-auto px-6 relative z-10 mt-16 md:mt-24">
                 <motion.div
@@ -68,7 +68,7 @@ export default function Skills() {
                     className="flex flex-col items-center text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
-                        Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Ecosystem</span>
+                        Core Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Stack</span>
                     </h2>
                     <p className="text-lg text-slate-600 font-medium max-w-2xl">
                         The tools and frameworks I have mastered and use daily to architect Enterprise-grade products.
@@ -86,15 +86,17 @@ export default function Skills() {
                         <motion.div
                             variants={cardVariants}
                             key={index}
-                            className="group relative bg-white rounded-3xl p-8 border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                            className="group relative bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] hover:border-slate-300 hover:-translate-y-2 transition-all duration-500 overflow-hidden"
                         >
+                            {/* Magic Top Gradient Line on Hover */}
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
                             {/* Card Header */}
-                            <div className="flex items-center mb-8 pb-4 border-b border-slate-100">
-                                <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center border border-slate-100 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-sm">
+                            <div className="flex items-center mb-8 pb-5 border-b border-slate-100">
+                                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center border border-slate-200/60 group-hover:scale-110 group-hover:-rotate-3 group-hover:shadow-md transition-all duration-500">
                                     {getCategoryIcon(index)}
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 ml-4">
-                                    {/* Note: The category text (e.g., 'Frontend', 'Backend') comes from your portfolioData */}
+                                <h3 className="text-xl font-bold text-slate-900 ml-4 group-hover:text-blue-600 transition-colors duration-300">
                                     {skillGroup.category}
                                 </h3>
                             </div>
@@ -102,13 +104,13 @@ export default function Skills() {
                             {/* Tags Container */}
                             <motion.div
                                 variants={containerVariants}
-                                className="flex flex-wrap gap-3"
+                                className="flex flex-wrap gap-2.5"
                             >
                                 {skillGroup.items.map((skill, idx) => (
                                     <motion.span
                                         variants={tagVariants}
                                         key={idx}
-                                        className="inline-flex items-center px-4 py-2 bg-slate-50/50 border border-slate-200/80 text-slate-700 text-sm font-semibold rounded-xl hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200 cursor-default"
+                                        className="inline-flex items-center px-3.5 py-1.5 bg-slate-50 border border-slate-200 text-slate-700 text-sm font-medium rounded-lg hover:bg-white hover:text-blue-600 hover:border-blue-300 hover:shadow-[0_2px_10px_-3px_rgba(59,130,246,0.2)] hover:-translate-y-0.5 transition-all duration-300 cursor-default"
                                     >
                                         {skill}
                                     </motion.span>
