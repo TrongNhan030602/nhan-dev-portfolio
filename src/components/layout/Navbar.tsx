@@ -31,9 +31,11 @@ export default function Navbar() {
     return (
         <header
             className={cn(
-                "fixed top-0 w-full z-50 transition-all duration-500",
+                // ĐÃ FIX: Kích hoạt GPU Acceleration để chống hở viền 1px khi scroll nhanh
+                "fixed top-0 w-full z-50 transition-all duration-500 transform-gpu antialiased",
                 isScrolled
-                    ? "bg-white/80 backdrop-blur-xl border-b border-slate-200/50 shadow-[0_4px_30px_rgba(0,0,0,0.03)] py-3"
+                    // ĐÃ FIX: Chuyển border-b thành shadow-inset để tránh sai số Box Model của trình duyệt
+                    ? "bg-white/80 backdrop-blur-xl shadow-[inset_0_-1px_0_rgba(226,232,240,0.5),0_4px_30px_rgba(0,0,0,0.03)] py-3"
                     : "bg-transparent py-5"
             )}
         >
