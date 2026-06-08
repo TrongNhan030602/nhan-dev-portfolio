@@ -16,7 +16,7 @@ export default function Hero() {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                    {/* Cột Trái: Nội dung chính */}
+                    {/* Left Column: Main Content */}
                     <div className="max-w-2xl">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ export default function Hero() {
                             {/* Status Badge */}
                             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm mb-8 hover:shadow-md transition-shadow cursor-default">
                                 <span className="flex w-2.5 h-2.5 rounded-full bg-green-500 mr-2.5 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
-                                <span className="text-sm font-semibold text-slate-700">Sẵn sàng nhận dự án mới</span>
+                                <span className="text-sm font-semibold text-slate-700">Available for new projects</span>
                             </div>
                         </motion.div>
 
@@ -36,9 +36,9 @@ export default function Hero() {
                             transition={{ duration: 0.5, delay: 0.1 }}
                             className="text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight"
                         >
-                            Giải pháp công nghệ <br />
+                            Tech Solutions <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 relative">
-                                Định hình tương lai
+                                Shaping the Future
                                 {/* Sparkle effect overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent mix-blend-overlay animate-shimmer pointer-events-none"></div>
                             </span>
@@ -66,24 +66,24 @@ export default function Hero() {
                                 {/* Shimmer Sweep Effect */}
                                 <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:animate-shimmer pointer-events-none"></div>
                                 <span className="relative flex items-center">
-                                    Khám Phá Dự Án
+                                    Explore Projects
                                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </span>
                             </a>
 
-                            {/* ĐÃ CẬP NHẬT: Trỏ đến file PDF trong thư mục public */}
+                            {/* UPDATED: Link to PDF file in public folder */}
                             <a
                                 href="/CV_Nguyen_Trong_Nhan_Fullstack.pdf"
                                 download="CV_Nguyen_Trong_Nhan_Fullstack.pdf"
                                 className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-slate-700 bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300 hover:text-blue-600 transition-all duration-300 shadow-sm hover:-translate-y-1"
                             >
                                 <Download className="mr-2 w-4 h-4" />
-                                Tải CV / Resume
+                                Download Resume
                             </a>
                         </motion.div>
                     </div>
 
-                    {/* Cột Phải: Tech Illustration (Code Mockup with Floating Animation) */}
+                    {/* Right Column: Tech Illustration (Code Mockup with Floating Animation) */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
                         animate={{
@@ -160,7 +160,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Shape Divider - Nút thắt nghệ thuật kết nối Sang Dark Mode của Experience Section */}
+            {/* Shape Divider - Artistic curve connecting to Dark Mode of Experience Section */}
             <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

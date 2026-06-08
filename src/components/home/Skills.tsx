@@ -5,7 +5,7 @@ import { portfolioData } from "@/data";
 import { MonitorSmartphone, Terminal, Database, Sparkles } from "lucide-react";
 
 export default function Skills() {
-    // Mapping Icon cho từng category dựa trên index
+    // Map Icon for each category based on index
     const getCategoryIcon = (index: number) => {
         switch (index) {
             case 0: return <MonitorSmartphone className="w-6 h-6 text-blue-500" />;
@@ -15,7 +15,7 @@ export default function Skills() {
         }
     };
 
-    // Animation Variants chuẩn Type để không lỗi TypeScript
+    // Standard Animation Variants for strict TypeScript
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -45,7 +45,7 @@ export default function Skills() {
     return (
         <section id="skills" className="relative pt-12 pb-32 bg-white overflow-hidden">
 
-            {/* Shape Divider - Kết nối trơn tru với nền Đen của Experience bên trên */}
+            {/* Shape Divider - Smooth transition connecting to the Dark Mode of Experience above */}
             <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-0 -translate-y-[1px]">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -68,10 +68,10 @@ export default function Skills() {
                     className="flex flex-col items-center text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
-                        Hệ Sinh Thái <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Công Nghệ</span>
+                        Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Ecosystem</span>
                     </h2>
                     <p className="text-lg text-slate-600 font-medium max-w-2xl">
-                        Những công cụ và framework tôi tinh giản, làm chủ và sử dụng mỗi ngày để kiến tạo các sản phẩm đạt chuẩn Enterprise.
+                        The tools and frameworks I have mastered and use daily to architect Enterprise-grade products.
                     </p>
                 </motion.div>
 
@@ -94,6 +94,7 @@ export default function Skills() {
                                     {getCategoryIcon(index)}
                                 </div>
                                 <h3 className="text-xl font-bold text-slate-900 ml-4">
+                                    {/* Note: The category text (e.g., 'Frontend', 'Backend') comes from your portfolioData */}
                                     {skillGroup.category}
                                 </h3>
                             </div>

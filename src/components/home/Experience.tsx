@@ -28,7 +28,7 @@ export default function Experience() {
                             <span>Work_History.exe</span>
                         </div>
                         <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white mb-6">
-                            Kinh Nghiệm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Thực Chiến</span>
+                            Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Experience</span>
                         </h2>
                     </motion.div>
 
@@ -43,14 +43,14 @@ export default function Experience() {
     );
 }
 
-// Tách riêng Card Component để quản lý local state (Mouse position)
+// Separate Card Component to manage local state (Mouse position)
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function ExperienceCard({ exp, index }: { exp: any; index: number }) {
     const cardRef = useRef<HTMLDivElement>(null);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
 
-    // Xử lý logic Ánh sáng bám chuột (Spotlight Effect)
+    // Handle Spotlight Effect following mouse
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         if (!cardRef.current) return;
         const rect = cardRef.current.getBoundingClientRect();
@@ -60,7 +60,7 @@ function ExperienceCard({ exp, index }: { exp: any; index: number }) {
         });
     };
 
-    // Định nghĩa chuẩn Type Variants để fix lỗi TypeScript
+    // Define standard Type Variants to fix TypeScript errors
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -86,7 +86,7 @@ function ExperienceCard({ exp, index }: { exp: any; index: number }) {
             onMouseLeave={() => setIsHovered(false)}
             className="group relative bg-slate-900/40 rounded-3xl p-1 md:p-[1px] border border-slate-800 hover:border-slate-700 transition-colors duration-500 overflow-hidden"
         >
-            {/* Spotlight Gradient - Chỉ xuất hiện khi Hover */}
+            {/* Spotlight Gradient - Only visible on Hover */}
             <div
                 className="absolute inset-0 z-0 transition-opacity duration-500 ease-in-out pointer-events-none"
                 style={{
@@ -132,7 +132,7 @@ function ExperienceCard({ exp, index }: { exp: any; index: number }) {
                     >
                         <div className="flex items-center mb-8">
                             <h4 className="text-sm font-black text-slate-100 uppercase tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-slate-500">
-                                Trách nhiệm & Thành tựu
+                                Responsibilities & Achievements
                             </h4>
                             <div className="ml-6 flex-1 h-px bg-gradient-to-r from-slate-800 to-transparent"></div>
                         </div>

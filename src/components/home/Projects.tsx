@@ -18,10 +18,10 @@ export default function Projects() {
                     className="flex flex-col items-center text-center mb-20"
                 >
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
-                        Dự Án <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Nổi Bật</span>
+                        Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Projects</span>
                     </h2>
                     <p className="text-lg text-slate-600 font-medium max-w-2xl mb-6">
-                        Từ ý tưởng thiết kế đến triển khai hệ thống lõi. Đây là minh chứng cho tư duy giải quyết vấn đề và năng lực kỹ thuật của tôi.
+                        From design concepts to core system implementation. These are a testament to my problem-solving mindset and technical capabilities.
                     </p>
                     <div className="h-1.5 w-24 bg-blue-600 rounded-full"></div>
                 </motion.div>
@@ -55,7 +55,7 @@ export default function Projects() {
                                     <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/20 transition-colors duration-500 z-10" />
                                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-8 group-hover:translate-y-0 transition-all duration-500 z-20 pointer-events-none">
                                         <div className="flex items-center gap-2 px-6 py-3 bg-white text-slate-900 font-bold rounded-full shadow-2xl scale-95 group-hover:scale-100 transition-transform duration-500">
-                                            Xem chi tiết <ArrowUpRight className="w-4 h-4 text-blue-600" />
+                                            View Details <ArrowUpRight className="w-4 h-4 text-blue-600" />
                                         </div>
                                     </div>
                                     <img
@@ -121,7 +121,7 @@ export default function Projects() {
                 >
                     <div className="flex items-center justify-between mb-8">
                         <h3 className="text-2xl font-bold text-slate-900 flex items-center">
-                            <Link2 className="w-6 h-6 mr-3 text-blue-500" /> Web/Sản phẩm khác
+                            <Link2 className="w-6 h-6 mr-3 text-blue-500" /> Other Web Products
                         </h3>
                     </div>
 

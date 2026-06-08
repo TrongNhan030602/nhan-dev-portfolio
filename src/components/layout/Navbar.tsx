@@ -9,9 +9,9 @@ import { GithubIcon, LinkedinIcon, ZaloIcon } from "@/components/ui/BrandIcons";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-    { name: "Kinh nghiệm", href: "#experience" },
-    { name: "Kỹ năng", href: "#skills" },
-    { name: "Dự án", href: "#projects" },
+    { name: "Experience", href: "#experience" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
 ];
 
 export default function Navbar() {
@@ -19,7 +19,7 @@ export default function Navbar() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-    // Xử lý logic Scroll-awareness (Tối ưu performance bằng passive listener)
+    // Handle Scroll-awareness logic (Optimize performance with passive listener)
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
@@ -45,7 +45,7 @@ export default function Navbar() {
                     className="group flex items-center gap-1 text-2xl font-black tracking-tighter text-slate-900 z-50 relative"
                     onClick={() => setIsMobileMenuOpen(false)}
                 >
-                    Nhân
+                    {portfolioData.personalInfo.name.split(" ")[2]}
                     <span className="text-blue-600 group-hover:text-cyan-500 transition-colors">.dev</span>
                 </Link>
 
@@ -92,7 +92,7 @@ export default function Navbar() {
 
                     <div className="w-px h-6 bg-slate-200 mx-1"></div>
 
-                    {/* Nút Zalo thay thế cho Email */}
+                    {/* Zalo button replacing Email */}
                     <Link
                         href={portfolioData.personalInfo.zalo}
                         target="_blank"
@@ -100,7 +100,7 @@ export default function Navbar() {
                         aria-label="Zalo Chat"
                     >
                         <MessageCircle className="w-4 h-4" />
-                        <span>Chat Zalo</span>
+                        <span>Zalo Chat</span>
                     </Link>
                 </div>
 
@@ -152,14 +152,14 @@ export default function Navbar() {
                                     <LinkedinIcon className="w-5 h-5" />
                                 </Link>
 
-                                {/* Nút Zalo thay thế cho Email ở Mobile */}
+                                {/* Zalo button replacing Email on Mobile */}
                                 <Link
                                     href={portfolioData.personalInfo.zalo}
                                     target="_blank"
                                     className="flex-1 flex justify-center items-center gap-2 p-3 bg-[#0068ff] text-white font-bold rounded-full hover:bg-blue-700 transition-colors"
                                 >
                                     <ZaloIcon className="w-5 h-5" />
-                                    Chat Zalo
+                                    Zalo Chat
                                 </Link>
                             </div>
                         </div>

@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Nguyen Trong Nhan | Fullstack Developer",
-  description: "Trang thông tin cá nhân và dự án nổi bật.",
+  description: "Personal portfolio showcasing professional experience, skills, and featured projects.",
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body>
         <Navbar />
         <main className="min-h-screen">

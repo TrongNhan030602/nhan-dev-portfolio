@@ -18,18 +18,18 @@ export default function Footer() {
                 <div className="flex flex-col items-center text-center mb-24">
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/50 border border-slate-700 text-slate-300 text-sm font-bold mb-8 backdrop-blur-md shadow-lg">
                         <span className="flex w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
-                        Sẵn sàng cho những thử thách mới
+                        Ready for new challenges
                     </div>
                     <h2 className="text-5xl md:text-7xl font-black text-white mb-10 tracking-tighter">
-                        Bạn có dự án cần <br className="hidden md:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">hiện thực hóa?</span>
+                        Have a project to <br className="hidden md:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">bring to life?</span>
                     </h2>
                     <a
                         href={portfolioData.personalInfo.zalo}
                         target="_blank"
                         className="group flex items-center justify-center px-10 py-5 text-base font-bold text-slate-900 bg-white rounded-full hover:bg-blue-50 transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(59,130,246,0.3)] hover:-translate-y-1"
                     >
-                        Chat qua Zalo ngay
+                        Let&apos;s chat on Zalo
                         <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1.5 transition-transform" />
                     </a>
                 </div>
@@ -40,37 +40,37 @@ export default function Footer() {
                     {/* Brand & Location */}
                     <div className="md:col-span-5 flex flex-col items-center md:items-start text-center md:text-left">
                         <Link href="/" className="group flex items-center gap-1 text-3xl font-black tracking-tighter text-white mb-4">
-                            {portfolioData.personalInfo.name.split(" ")[0]}
+                            {portfolioData.personalInfo.name.split(" ")[2]}
                             <span className="text-blue-500 group-hover:text-cyan-400 transition-colors">.dev</span>
                         </Link>
                         <p className="text-slate-400 font-medium leading-relaxed max-w-sm mb-8">
-                            {portfolioData.personalInfo.role}. Tập trung chuyên sâu vào kiến trúc hệ thống backend và tối ưu hóa trải nghiệm giao diện người dùng.
+                            {portfolioData.personalInfo.role}. Specializing in robust backend system architecture and optimizing user interface experiences.
                         </p>
                         <div className="inline-flex items-center gap-2 text-slate-300 text-sm font-semibold bg-slate-800/50 px-5 py-2.5 rounded-xl border border-slate-700/50 shadow-inner">
                             <MapPin className="w-4 h-4 text-blue-400" />
-                            Cần Thơ, Việt Nam (Remote & On-site)
+                            Can Tho, Vietnam (Remote & On-site)
                         </div>
                     </div>
 
                     {/* Quick Navigation */}
                     <div className="md:col-span-4 flex flex-col items-center md:items-start">
-                        <h4 className="text-slate-100 font-black tracking-widest uppercase mb-6 text-sm">Điều hướng</h4>
+                        <h4 className="text-slate-100 font-black tracking-widest uppercase mb-6 text-sm">Navigation</h4>
                         <nav className="flex flex-col gap-4 text-slate-400 font-medium">
                             <Link href="#experience" className="hover:text-blue-400 hover:translate-x-1 transition-all inline-flex items-center">
-                                <span className="w-1.5 h-1.5 rounded-full bg-slate-700 mr-3"></span> Kinh nghiệm
+                                <span className="w-1.5 h-1.5 rounded-full bg-slate-700 mr-3"></span> Experience
                             </Link>
                             <Link href="#skills" className="hover:text-blue-400 hover:translate-x-1 transition-all inline-flex items-center">
-                                <span className="w-1.5 h-1.5 rounded-full bg-slate-700 mr-3"></span> Kỹ năng chuyên môn
+                                <span className="w-1.5 h-1.5 rounded-full bg-slate-700 mr-3"></span> Professional Skills
                             </Link>
                             <Link href="#projects" className="hover:text-blue-400 hover:translate-x-1 transition-all inline-flex items-center">
-                                <span className="w-1.5 h-1.5 rounded-full bg-slate-700 mr-3"></span> Dự án nổi bật
+                                <span className="w-1.5 h-1.5 rounded-full bg-slate-700 mr-3"></span> Featured Projects
                             </Link>
                         </nav>
                     </div>
 
                     {/* Social Links */}
                     <div className="md:col-span-3 flex flex-col items-center md:items-end">
-                        <h4 className="text-slate-100 font-black tracking-widest uppercase mb-6 text-sm">Kết nối</h4>
+                        <h4 className="text-slate-100 font-black tracking-widest uppercase mb-6 text-sm">Connect</h4>
                         <div className="flex flex-wrap justify-center md:justify-end gap-3">
                             <a
                                 href={portfolioData.personalInfo.github}
@@ -115,7 +115,7 @@ export default function Footer() {
                     </p>
                     <div className="flex items-center gap-2 font-bold px-4 py-2 bg-slate-900 rounded-lg border border-slate-800">
                         <Terminal className="w-4 h-4 text-blue-500" />
-                        <span>Next.js 16</span>
+                        <span>Next.js 15</span>
                         <span className="text-slate-700 mx-1">•</span>
                         <span>Tailwind v4</span>
                     </div>
