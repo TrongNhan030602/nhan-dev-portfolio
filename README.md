@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nguyen Trong Nhan — Fullstack Developer Portfolio
 
-## Getting Started
+Production-ready personal portfolio built with Next.js 16, React 19, TypeScript,
+Tailwind CSS v4, Framer Motion, GSAP ScrollTrigger, and Canvas.
 
-First, run the development server:
+## Requirements
+
+- Node.js 20 or newer
+- npm 10 or newer
+
+## Local development
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quality checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+```
 
-## Learn More
+## Content management
 
-To learn more about Next.js, take a look at the following resources:
+All portfolio content, localized copy, projects, skills, and contact information
+are centralized in `src/data/portfolioData.ts`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact form
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The form posts to the internal `POST /api/contact` route. The route validates
+and normalizes input, checks a honeypot and submission timing, then forwards the
+message through FormSubmit. FormSubmit may send a one-time activation email to
+the portfolio owner's address before the first message can be delivered.
 
-## Deploy on Vercel
+## Deploy to Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Import the repository into Vercel.
+2. Keep the detected framework preset as Next.js.
+3. Use `npm run build` as the build command.
+4. Deploy. No environment variables are required by the current implementation.
